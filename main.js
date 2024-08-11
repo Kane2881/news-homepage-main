@@ -4,6 +4,7 @@ const primaryHeader = document.querySelector(".primary-header");
 const navList = document.querySelector(".nav-list");
 
 navToggle.addEventListener("click", () => {
+  primaryHeader.toggleAttribute("data-overlay");
   primaryHeader.hasAttribute("data-overlay")
     ? navToggle.setAttribute("aria-expanded", true)
     : navToggle.setAttribute("aria-expanded", false);
@@ -11,5 +12,4 @@ navToggle.addEventListener("click", () => {
   primaryHeader.hasAttribute("data-overlay")
     ? navList.classList.add("active")
     : navList.classList.remove("active");
-  primaryHeader.toggleAttribute("data-overlay");
 });
